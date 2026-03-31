@@ -1,0 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Pirata+One&display=swap');
+
+/* Provide sensible defaults for the app */
+:root {
+	--font-sans: 'Poppins', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+}
+
+body {
+	font-family: var(--font-sans);
+}
+
+/* Pirata One font class */
+.font-pirata {
+	font-family: 'Pirata One', serif;
+	font-weight: 400;
+}
+
+/* Poppins font class */
+.font-poppins {
+	font-family: 'Poppins', sans-serif;
+	font-weight: 400;
+}
