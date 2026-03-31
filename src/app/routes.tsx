@@ -23,34 +23,39 @@ function RootLayout() {
   );
 }
 
-export const router = createBrowserRouter([
+export const router = createBrowserRouter(
+  [
+    {
+      element: <RootLayout />,
+      children: [
+        {
+          path: '/',
+          element: <Layout><SplashPage /></Layout>,
+        },
+        {
+          path: '/library',
+          element: <Layout><LibraryPage /></Layout>,
+        },
+        {
+          path: '/library-selected',
+          element: <Layout><LibrarySelectedPage /></Layout>,
+        },
+        {
+          path: '/preview',
+          element: <Layout><PreviewPage /></Layout>,
+        },
+        {
+          path: '/editor',
+          element: <Layout><EditorPage /></Layout>,
+        },
+        {
+          path: '/add-tattoo',
+          element: <Layout><AddTattooPage /></Layout>,
+        },
+      ],
+    },
+  ],
   {
-    element: <RootLayout />,
-    children: [
-      {
-        path: '/',
-        element: <Layout><SplashPage /></Layout>,
-      },
-      {
-        path: '/library',
-        element: <Layout><LibraryPage /></Layout>,
-      },
-      {
-        path: '/library-selected',
-        element: <Layout><LibrarySelectedPage /></Layout>,
-      },
-      {
-        path: '/preview',
-        element: <Layout><PreviewPage /></Layout>,
-      },
-      {
-        path: '/editor',
-        element: <Layout><EditorPage /></Layout>,
-      },
-      {
-        path: '/add-tattoo',
-        element: <Layout><AddTattooPage /></Layout>,
-      },
-    ],
-  },
-]);
+    basename: import.meta.env.BASE_URL,
+  }
+);
